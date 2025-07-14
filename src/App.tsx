@@ -50,7 +50,7 @@ function App() {
         </button>
       </form> 
       </div>
-      <div className='mt-4 h-3/4 overflow-auto whitespace-pre-wrap'>
+      <div className='mt-4 h-screen overflow-auto whitespace-pre-wrap'>
        {output}
       </div>
     </div> 
