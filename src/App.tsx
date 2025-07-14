@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-
+import render from './Render'
 function App() {
   const[text, setText] = useState("")
-  const [output, setOutput] = useState("")
+  const [output, setOutput] = useState<any>()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { 
     e.preventDefault()
@@ -30,7 +30,7 @@ function App() {
 
       const chunk = decoder.decode(value, {stream: true})
       result += chunk
-      setOutput(result) 
+      setOutput(render(result)) 
     } 
   } 
   catch (error) { 
